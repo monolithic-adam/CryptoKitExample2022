@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A525F93028B9FB5F0064DBF9 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525F92E28B9FB5F0064DBF9 /* Keychain.swift */; };
+		A525F93128B9FB5F0064DBF9 /* Cryptographer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525F92F28B9FB5F0064DBF9 /* Cryptographer.swift */; };
+		A52BE5F728B9FAF70060743B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A52BE5F628B9FAF70060743B /* KeychainAccess */; };
 		A5A0AABE28AB838000325C6A /* CryptoKitExample2022App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0AABD28AB838000325C6A /* CryptoKitExample2022App.swift */; };
 		A5A0AAC028AB838000325C6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0AABF28AB838000325C6A /* ContentView.swift */; };
 		A5A0AAC228AB838200325C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A0AAC128AB838200325C6A /* Assets.xcassets */; };
@@ -14,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A525F92E28B9FB5F0064DBF9 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		A525F92F28B9FB5F0064DBF9 /* Cryptographer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptographer.swift; sourceTree = "<group>"; };
 		A5A0AABA28AB838000325C6A /* CryptoKitExample2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoKitExample2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0AABD28AB838000325C6A /* CryptoKitExample2022App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKitExample2022App.swift; sourceTree = "<group>"; };
 		A5A0AABF28AB838000325C6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52BE5F728B9FAF70060743B /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				A5A0AABD28AB838000325C6A /* CryptoKitExample2022App.swift */,
+				A525F92F28B9FB5F0064DBF9 /* Cryptographer.swift */,
+				A525F92E28B9FB5F0064DBF9 /* Keychain.swift */,
 				A5A0AABF28AB838000325C6A /* ContentView.swift */,
 				A5A0AAC128AB838200325C6A /* Assets.xcassets */,
 				A5A0AAC328AB838200325C6A /* Preview Content */,
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = CryptoKitExample2022;
+			packageProductDependencies = (
+				A52BE5F628B9FAF70060743B /* KeychainAccess */,
+			);
 			productName = CryptoKitExample2022;
 			productReference = A5A0AABA28AB838000325C6A /* CryptoKitExample2022.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = A5A0AAB128AB838000325C6A;
+			packageReferences = (
+				A52BE5F528B9FAF70060743B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = A5A0AABB28AB838000325C6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A525F93128B9FB5F0064DBF9 /* Cryptographer.swift in Sources */,
 				A5A0AAC028AB838000325C6A /* ContentView.swift in Sources */,
 				A5A0AABE28AB838000325C6A /* CryptoKitExample2022App.swift in Sources */,
+				A525F93028B9FB5F0064DBF9 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A52BE5F528B9FAF70060743B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A52BE5F628B9FAF70060743B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A52BE5F528B9FAF70060743B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5A0AAB228AB838000325C6A /* Project object */;
 }
